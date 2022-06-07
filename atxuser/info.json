@@ -1,0 +1,11 @@
+{
+    "author": ["Ataraxy Inc"],
+    "min_bot_version": "3.4.7",
+    "description": "Ataraxy's custom Discord User Profile.",
+    "hidden": false,
+    "install_msg": "",
+    "required_cogs": {},
+    "requirements": [],
+    "short": "ATX User",
+    "tags": ["ATX"]
+}
