@@ -427,7 +427,7 @@ class AtaraxyProfile(commands.Cog):
             if len(clashAccounts) > 0:
                 discordEmbed.add_field(
                     name=f"**__Clash Of Clans__**",
-                    value=f"**{clashMemberDesc}**\n*Only your top 3 accounts, ranked by XP, are shown here.*",
+                    value=f"**{clashMemberDesc}**\n*Only your top 3 accounts, ranked by XP, are shown here. Update your Clash profile in <#803655289034375178>.*",
                     inline=False)
                 
                 discordEmbed.set_thumbnail(url=user.avatar_url)
@@ -461,6 +461,11 @@ class AtaraxyProfile(commands.Cog):
                 name=f"**__Apex Legends Mobile__**",
                 value=f"\u200b\u3000IGN: **{apexMobileSet[0]['ign']}**",
                 inline=False)
+
+        discordEmbed.add_field(
+            name=f"\u200b",
+            value=f"*Use the commands in `;myinfo` to update your information on this page, except for Clash Of Clans.*",
+            inline=False)
                 
         await ctx.send(embed=discordEmbed)
         return await init_message.delete()
