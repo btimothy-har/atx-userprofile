@@ -462,10 +462,11 @@ class AtaraxyProfile(commands.Cog):
                 value=f"\u200b\u3000IGN: **{apexMobileSet[0]['ign']}**",
                 inline=False)
 
-        discordEmbed.add_field(
-            name=f"\u200b",
-            value=f"*Use the commands in `;myinfo` to update your information on this page, except for Clash Of Clans.*",
-            inline=False)
+        if user == ctx.author:
+            discordEmbed.add_field(
+                name=f"\u200b",
+                value=f"*Use the commands in `;myinfo` to update your information on this page, except for Clash Of Clans.*",
+                inline=False)
                 
         await ctx.send(embed=discordEmbed)
         return await init_message.delete()
